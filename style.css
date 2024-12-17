@@ -1,27 +1,307 @@
 body {
 margin: 0;
 font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-background-color: black;
-color: white;
+background-color: #2D1013;
+color: #FFEEDA;
+
+/*algemene css*/
 
 h1 {
-    font-size: 10em;
+    font-family: "Berkshire Swash", serif;
+    font-size: 5em;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 20%;
+    color: #FFEEDA;
+}
 
+h2 {
+    font-family: "Gelasio", serif;
+    font-size: 2.5em;
+    display: flex;
+    justify-content: left;
+    align-items:baseline;
+    color: #FFEEDA;
+}
+
+p {
+    font-family: "Josefin Sans", sans-serif;
 }
 
 a {
     text-decoration: none;
-    color: white;    
+    color: white;
 }
 
-a:hover {
-    opacity: 0.8;
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
+.nav-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background-color: black;
+    padding: 15px;
+}
 
+.logo {
+    height: 50px;
+    margin-right: 50px;
+    margin-left: 20px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links li a {
+    color: white;
+    font-size: 1rem;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.nav-links li a.active {
+    background-color: #6b2b28; /* Actieve link kleur */
+    border-radius: 5px;
+}
+
+.nav-links li a:hover {
+    background-color: #6b2b28; /* Hover effect */
+}
+
+.tavern-image {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.tavern-image img {
+    max-height: 655px;
+    width: auto;
+}
+
+section {
+    margin-bottom: 60px;
+    padding: 20px;
+}
+
+footer {
+    background-color: black;
+    padding: 3%;
+}
+
+/*home-pagina*/
+
+header{
+    justify-content: center;
+    align-items: center;
+    padding: 8% 23%;
+    text-align: center;
+    background: linear-gradient(to bottom, #2D1013, #CE7F5C, #522b24);
+}
+
+button{
+    background-color: #9D3C31;
+    color: white;
+    padding: 12px 35px;
+    margin-top: 1em;
+    font-size: 1em;
+    border: none;
+    border-radius: 8px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+button:hover {
+    background-color: #541818;
+    color: white;
+
+}
+main {
+    padding-left: 5%;
+    padding-top: 3%;
+    align-items: left;
+    justify-content: left;
+    
+}
+
+.slider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px auto;
+    gap: 10px;
+}
+
+.episode-container, .character-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    padding: 10px 10px;
+    max-width: 80%;
+}
+
+.episode {
+    text-align: center;
+    flex: 0 0 30%; 
+}
+
+.character {
+    text-align: center;
+    flex: 0 0 20%; 
+}
+
+.episode img {
+    width: 90%;
+    height: auto;
+    border-radius: 10px;
+    border: solid;
+    border-color: #FFEEDA;
+    gap: 30px;
+}
+
+.character img {
+    width: 50%;
+    height: auto;
+    border-radius: 10px;
+    flex: 0 0 40%; 
+}
+
+.arrow {
+    background-color: transparent;
+    color: #fff;
+    font-size: 2rem;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.community {
+    align-items: left;
+    justify-content: left;
+    padding-right: 40%;
+}
+
+main ul {
+    list-style: none;
+}
+
+/*About us*/
+
+section.about {
+    align-items: left;
+    justify-content: left;
+    text-align: left;
+}
+
+.about, .murder {
+    align-items: left;
+    justify-content: left;
+    padding: 0 0;
+    text-align: left;
+}
+
+.about, .murder p {
+    padding-right: 40%;
+    text-align: left;
+}
+
+.creators {
+    padding: 50px 20px;
+    text-align: left;
+}
+
+.creators h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    font-family: 'Georgia', serif;
+}
+
+.creators-container {
+    display: flex;
+    justify-content: center;
+    gap: 20%;
+    flex-wrap: wrap; 
+    margin-top: 20px;
+}
+
+.creator {
+    width: 300px;
+    text-align: left;
+    border-radius: 10px; 
+    padding: 20px;
+}
+
+.creator img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.disclaimer {
+    text-align: left;
+    padding-right: 40%;
+}
+
+/*episodes*/
+
+.episodes {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+.episodes-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.episode-filters .btn {
+    background-color: #ccc;
+    color: #333;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 20px;
+    margin-right: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.episode-filters .btn.active,
+.episode-filters .btn:hover {
+    background-color: #6b2b28;
+    color: #fff;
+}
+
+.episodes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.episode-image {
+    width: 100%;
+    height:auto; 
+    object-fit: cover; 
+    border-radius: 10px;
+    border: solid;
+    border-color: #FFEEDA;
+    
+}
+
+.episode-card p {
+    margin: 10px;
+    
+}
 
 }
